@@ -24,7 +24,8 @@ public class UserService {
     public void createUser(Users user) throws UserAlreadyExistsException{
             if(userRepository.findUserByEmail(user.getEmail())==null){
                 user.setPassword(passwordEncoder.encode(user.getPassword()));
-                user.setRoles(Arrays.asList("CUSTOMER"));
+                if(user.getRoles()==null) user.setRoles(Arrays.asList("CUSTOMER"));
+                else user.setRoles(user.getRoles());
                 userRepository.save(user);
             }
 
