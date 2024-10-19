@@ -7,8 +7,6 @@ WORKDIR /app
 # Copy the JAR file into the container
 COPY ./build/libs/*.jar /app/stayeaseapp.jar
 
-# Expose the application port
-EXPOSE 8080
 
 # Command to run the JAR file
 CMD ["java", "-jar", "/app/stayeaseapp.jar"]
