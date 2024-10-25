@@ -25,7 +25,7 @@ Installation
 
 	1.	Clone the repository:
 
-git clone https://github.com/yourusername/stayease.git
+git clone https://github.com/yourusername/StayEase.git
 
 
 	2.	Navigate into the project directory:
